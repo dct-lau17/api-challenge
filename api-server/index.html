@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server Test</title>
+ </head>
+ <body>
+  <h1>Server is running on localhost:3031</h1>
+  <button onclick='getData()'>Test button</button>
+  <p class='test'></p>
+  <script>
+    async function getData() {
+      const response = await fetch('/logs');
+      const data = await response.json();
+      
+      console.log(data);
+    }
+    // getData();
+    
+  </script>
+ </body>
+</html>
